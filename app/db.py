@@ -71,7 +71,7 @@ def update_student_email(student_id: int, new_email: str) -> int:
 def delete_student(student_id: int) -> int:
     """Delete a student by id. Returns number of rows deleted (0 or 1)."""
     with get_conn() as conn:
-        with con.cursor() as cur:
+        with conn.cursor() as cur:
             cur.execute("DELETE FROM students WHERE student_id = %s;", (student_id,))
             deleted = cur.rowcount
             conn.commit()
