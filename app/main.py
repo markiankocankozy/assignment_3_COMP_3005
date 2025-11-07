@@ -2,10 +2,10 @@
 #Simple CLI to demonstrate CRUD functions required by the assignment
 #
 #Usage examples:
-#   python app/main.py list
-#   python app/main.py add "Alice" "Wonder" "alice@example.com" 2023-09-03
-#   python app/main.py update-email 1 "john.new@example.com"
-#   python app/main.py delete 3
+#   python3 app/main.py list
+#   python3 app/main.py add "Alice" "Wonder" "alice@example.com" 2023-09-03
+#   python3 app/main.py update-email 1 "john.new@example.com"
+#   python3 app/main.py delete 3
 #
 # (First create the DB + table and load schema.sql; see README.)
 
@@ -23,10 +23,10 @@ def print_students():
 def usage():
     print(
         "Usage:\n"
-        "   python app/main.py list\n"
-        "   python app/main.py add <first_name> <last_name> <email> <enrollment_date|None>\n"
-        "   python app/main.py update-email <student_id> <new_email>\n"
-        "   python app/main.py delete <student_id>\n"
+        "   python3 app/main.py list\n"
+        "   python3 app/main.py add <first_name> <last_name> <email> <enrollment_date|None>\n"
+        "   python3 app/main.py update-email <student_id> <new_email>\n"
+        "   python3 app/main.py delete <student_id>\n"
     )
     
 if __name__ == "__main__":
