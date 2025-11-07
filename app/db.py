@@ -37,7 +37,7 @@ def get_all_students() -> List[Dict[str, Any]]:
             cur.execute("SELECT student_id, first_name, last_name, email, enrollment_date FROM students ORDER BY student_id;")
             return cur.fetchall()
 
-def ass_student(first_name: str, last_name: str, email: str, enrollment_date: Optional[str]) -> int:
+def add_student(first_name: str, last_name: str, email: str, enrollment_date: Optional[str]) -> int:
     """
     Insert a new student. Returns the new student_id.
     enrollment_date should be an ISO date string (YYYY-MM-DD) or None.
@@ -58,7 +58,7 @@ def ass_student(first_name: str, last_name: str, email: str, enrollment_date: Op
 
 def update_student_email(student_id: int, new_email: str) -> int:
     """Update email for a given student_id. Returns number of rows updated (0 or 1)."""
-    with get_conn() as conn
+    with get_conn() as conn:
         with conn.cursor() as cur:
             cur.execute(
                 "UPDATE students SET email = %s WHERE student_id = %s;",
