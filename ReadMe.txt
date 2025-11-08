@@ -1,3 +1,6 @@
+Video link:
+https://www.youtube.com/watch?v=_IDKjGLaMzw
+
 Install instructions:
 pip3 install -r requirements.txt
 
